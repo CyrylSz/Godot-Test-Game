@@ -2,6 +2,10 @@ extends CharacterBody2D
 
 @export var speed: int = 100
 
+var zoom_speed: Vector2 = Vector2(0.1, 0.1)
+var zoom_min: Vector2 = Vector2(0.5, 0.5)
+var zoom_max: Vector2 = Vector2(1.0, 1.0)
+
 #func _ready():
 	#var anim_sprite: Sprite2D = $Sprite2D
 	#var anim: AnimationPlayer = $AnimationPlayer
@@ -13,6 +17,10 @@ func _process(_delta):
 	else: velocity = Vector2.ZERO
 	Idle(direction)
 	move_and_slide()
+	
+	if Input.is_action_pressed("scroll_in"): $Camera.zoom = Vector2(min($Camera.zoom.x + zoom_speed.x, zoom_max.x), min($Camera.zoom.y + zoom_speed.y, zoom_max.y))
+	elif Input.is_action_pressed("scroll_out"): $Camera.zoom = Vector2(max($Camera.zoom.x - zoom_speed.x, zoom_min.x), max($Camera.zoom.y - zoom_speed.y, zoom_min.y))
+	
 
 func Idle(direction):
 	match direction:
