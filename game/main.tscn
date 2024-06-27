@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://p081b7i5hndk"]
+
+[ext_resource type="PackedScene" uid="uid://bcj7jvthk0fd6" path="res://levels/level-1-prison.tscn" id="1_wbkk7"]
+[ext_resource type="PackedScene" uid="uid://hf37fvoix7wn" path="res://player/player.tscn" id="2_48wy7"]
+
+[node name="Main" type="Node"]
+
+[node name="Level-1-Prison" parent="." instance=ExtResource("1_wbkk7")]
+
+[node name="Player" parent="." instance=ExtResource("2_48wy7")]

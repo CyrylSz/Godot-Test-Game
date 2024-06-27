@@ -1,2 +1,4 @@
+# Celem tego pliku jest zapewnienie, że Git odpowiednio traktuje różne typy plików w projekcie
+
 # Normalize EOL for all files that Git considers text files.
 * text=auto eol=lf

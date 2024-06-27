@@ -1,8 +1,9 @@
-# Godot 4+ specific ignores
-.godot/
+# Celem tego pliku jest rekurencyjne blokowanie zbędnych plików konfiguracyjnych aby nie były wysyłane do repozytorium
 
-# Godot-specific ignores
+# Godot ignores
+.godot/
 .import/
+*.png.import
 export.cfg
 export_presets.cfg
 
