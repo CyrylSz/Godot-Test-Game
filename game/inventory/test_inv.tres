@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="InventoryData" load_steps=14 format=3 uid="uid://cvf1fyhnnkox5"]
+
+[ext_resource type="Script" path="res://inventory/inventory_data.gd" id="1_xdgw4"]
+[ext_resource type="Resource" uid="uid://dm4b75o0rh2ih" path="res://item/items/glock-45.tres" id="2_j1vlc"]
+[ext_resource type="Script" path="res://inventory/slot/slot_data.gd" id="3_kbhnl"]
+[ext_resource type="Resource" uid="uid://bvncf1pt684tp" path="res://item/items/ammo9mm.tres" id="4_10v4m"]
+[ext_resource type="Resource" uid="uid://dcf1gof1gk2hp" path="res://item/items/fork.tres" id="5_mb4uo"]
+[ext_resource type="Resource" uid="uid://cdylb6uxboctg" path="res://item/items/health_boost.tres" id="6_rnvsl"]
+[ext_resource type="Resource" uid="uid://b7umcb07gxsyg" path="res://item/items/quard_suit.tres" id="7_14hbg"]
+
+[sub_resource type="Resource" id="Resource_ppf1l"]
+script = ExtResource("3_kbhnl")
+item_data = ExtResource("2_j1vlc")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_wtv3l"]
+script = ExtResource("3_kbhnl")
+item_data = ExtResource("4_10v4m")
+quantity = 15
+
+[sub_resource type="Resource" id="Resource_d3er7"]
+script = ExtResource("3_kbhnl")
+item_data = ExtResource("5_mb4uo")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_vuc5k"]
+script = ExtResource("3_kbhnl")
+item_data = ExtResource("6_rnvsl")
+quantity = 5
+
+[sub_resource type="Resource" id="Resource_gsigo"]
+script = ExtResource("3_kbhnl")
+item_data = ExtResource("4_10v4m")
+quantity = 5
+
+[sub_resource type="Resource" id="Resource_ayd8a"]
+script = ExtResource("3_kbhnl")
+item_data = ExtResource("7_14hbg")
+quantity = 1
+
+[resource]
+script = ExtResource("1_xdgw4")
+slot_datas = Array[ExtResource("3_kbhnl")]([SubResource("Resource_ppf1l"), null, null, SubResource("Resource_wtv3l"), SubResource("Resource_d3er7"), null, null, SubResource("Resource_vuc5k"), SubResource("Resource_gsigo"), null, null, SubResource("Resource_ayd8a")])

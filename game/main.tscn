@@ -1,10 +1,140 @@
-[gd_scene load_steps=3 format=3 uid="uid://p081b7i5hndk"]
+[gd_scene load_steps=21 format=3 uid="uid://p081b7i5hndk"]
 
-[ext_resource type="PackedScene" uid="uid://bcj7jvthk0fd6" path="res://levels/level-1-prison.tscn" id="1_wbkk7"]
+[ext_resource type="Script" path="res://main.gd" id="1_nqrxi"]
+[ext_resource type="PackedScene" uid="uid://bcj7jvthk0fd6" path="res://level/level-1-prison.tscn" id="1_wbkk7"]
 [ext_resource type="PackedScene" uid="uid://hf37fvoix7wn" path="res://player/player.tscn" id="2_48wy7"]
+[ext_resource type="Resource" uid="uid://cvf1fyhnnkox5" path="res://inventory/test_inv.tres" id="3_7ggx3"]
+[ext_resource type="PackedScene" uid="uid://dcluj0i13w4ng" path="res://inventory/inventory.tscn" id="3_tugeh"]
+[ext_resource type="Script" path="res://inventory/inventory_interface.gd" id="5_6hkya"]
+[ext_resource type="PackedScene" uid="uid://c7p0ktjnp67k7" path="res://inventory/slot/slot.tscn" id="7_ugt3c"]
+[ext_resource type="PackedScene" uid="uid://p00wybin4l13" path="res://inventory/hot_bar_inventory.tscn" id="8_5tulp"]
+[ext_resource type="PackedScene" uid="uid://dqkvw6y2jw61i" path="res://interactable/chest.tscn" id="8_akh01"]
+[ext_resource type="Script" path="res://inventory/inventory_data.gd" id="9_3vaeg"]
+[ext_resource type="Resource" uid="uid://bvncf1pt684tp" path="res://item/items/ammo9mm.tres" id="10_bikc2"]
+[ext_resource type="Script" path="res://inventory/slot/slot_data.gd" id="11_bqvf6"]
+[ext_resource type="Resource" uid="uid://d2tm1vk6wysf7" path="res://item/items/keycard.tres" id="12_jmbm6"]
+[ext_resource type="Resource" uid="uid://248emusddkuc" path="res://item/items/glassKnife.tres" id="13_6yacm"]
+[ext_resource type="PackedScene" uid="uid://b6vetdajr2a5m" path="res://item/pick_up/pick_up.tscn" id="14_lfcxp"]
+
+[sub_resource type="Resource" id="Resource_2ht6h"]
+script = ExtResource("11_bqvf6")
+item_data = ExtResource("10_bikc2")
+quantity = 6
+
+[sub_resource type="Resource" id="Resource_nb0b8"]
+script = ExtResource("11_bqvf6")
+item_data = ExtResource("12_jmbm6")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_kfwnn"]
+script = ExtResource("11_bqvf6")
+item_data = ExtResource("13_6yacm")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_2ub4g"]
+script = ExtResource("9_3vaeg")
+slot_datas = Array[ExtResource("11_bqvf6")]([SubResource("Resource_2ht6h"), null, SubResource("Resource_nb0b8"), SubResource("Resource_kfwnn"), null, null])
+
+[sub_resource type="Resource" id="Resource_mm3i3"]
+script = ExtResource("11_bqvf6")
+item_data = ExtResource("10_bikc2")
+quantity = 8
 
 [node name="Main" type="Node"]
+script = ExtResource("1_nqrxi")
 
 [node name="Level-1-Prison" parent="." instance=ExtResource("1_wbkk7")]
+scale = Vector2(4, 4)
 
 [node name="Player" parent="." instance=ExtResource("2_48wy7")]
+scale = Vector2(4, 4)
+inventory_data = ExtResource("3_7ggx3")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="InventoryInterface" type="Control" parent="UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_6hkya")
+
+[node name="PlayerInventory" parent="UI/InventoryInterface" instance=ExtResource("3_tugeh")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 4.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="EquipInventory" parent="UI/InventoryInterface" instance=ExtResource("3_tugeh")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 180.0
+offset_top = -172.0
+offset_right = 196.0
+offset_bottom = -156.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ExternalInventory" parent="UI/InventoryInterface" instance=ExtResource("3_tugeh")]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -470.0
+offset_right = 4.0
+offset_bottom = -462.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="GrabbedSlot" parent="UI/InventoryInterface" instance=ExtResource("7_ugt3c")]
+visible = false
+modulate = Color(1, 1, 1, 0.513726)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="HotBarInventory" parent="UI" instance=ExtResource("8_5tulp")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -123.0
+offset_top = -90.0
+offset_right = 123.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Chest" parent="." instance=ExtResource("8_akh01")]
+position = Vector2(0, 192)
+scale = Vector2(4, 4)
+inventory_data = SubResource("Resource_2ub4g")
+
+[node name="PickUp" parent="." instance=ExtResource("14_lfcxp")]
+position = Vector2(-2, 172)
+slot_data = SubResource("Resource_mm3i3")
+
+[connection signal="drop_slot_data" from="UI/InventoryInterface" to="." method="_on_inventory_interface_drop_slot_data"]
+[connection signal="gui_input" from="UI/InventoryInterface" to="UI/InventoryInterface" method="_on_gui_input"]
+[connection signal="visibility_changed" from="UI/InventoryInterface" to="UI/InventoryInterface" method="_on_visibility_changed"]

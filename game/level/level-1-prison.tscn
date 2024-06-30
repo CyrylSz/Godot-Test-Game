@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bcj7jvthk0fd6"]
 
-[ext_resource type="Texture2D" uid="uid://ikcr2m6te2yw" path="res://levels/level-1-prison.png" id="1_irgiu"]
+[ext_resource type="Texture2D" uid="uid://b2orokqitireo" path="res://level/level-1-prison.png" id="1_irgiu"]
 
 [node name="Level-1-Prison" type="Node2D"]
 

@@ -3,7 +3,7 @@
 # Godot ignores
 .godot/
 .import/
-*.png.import
+*.import
 export.cfg
 export_presets.cfg
 

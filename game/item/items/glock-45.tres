@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dm4b75o0rh2ih"]
+
+[ext_resource type="Script" path="res://item/item_data.gd" id="1_cr6xh"]
+[ext_resource type="Texture2D" uid="uid://s3j1y0fpns7p" path="res://item/itemTextures.png" id="2_k7hn3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kbum"]
+atlas = ExtResource("2_k7hn3")
+region = Rect2(16, 16, 16, 16)
+
+[resource]
+script = ExtResource("1_cr6xh")
+name = "Glock-45"
+description = "LMB to shoot"
+stackable = false
+texture = SubResource("AtlasTexture_2kbum")

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemDataConsumable" load_steps=4 format=3 uid="uid://cdylb6uxboctg"]
+
+[ext_resource type="Script" path="res://item/use/item_data_consumable.gd" id="1_38vqb"]
+[ext_resource type="Texture2D" uid="uid://s3j1y0fpns7p" path="res://item/itemTextures.png" id="2_24yqh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgk0j"]
+atlas = ExtResource("2_24yqh")
+region = Rect2(16, 32, 16, 16)
+
+[resource]
+script = ExtResource("1_38vqb")
+heal_value = 1
+name = "Health Boost"
+description = "LMB to heal"
+stackable = true
+texture = SubResource("AtlasTexture_rgk0j")

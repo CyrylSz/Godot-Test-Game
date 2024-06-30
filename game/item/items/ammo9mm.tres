@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://bvncf1pt684tp"]
+
+[ext_resource type="Script" path="res://item/item_data.gd" id="1_73tqj"]
+[ext_resource type="Texture2D" uid="uid://s3j1y0fpns7p" path="res://item/itemTextures.png" id="2_bocpr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lh77p"]
+atlas = ExtResource("2_bocpr")
+region = Rect2(0, 16, 16, 16)
+
+[resource]
+script = ExtResource("1_73tqj")
+name = "9mm Bullets"
+description = "Ammo to Glock-45"
+stackable = true
+texture = SubResource("AtlasTexture_lh77p")

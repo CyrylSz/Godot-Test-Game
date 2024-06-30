@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dcf1gof1gk2hp"]
+
+[ext_resource type="Script" path="res://item/item_data.gd" id="1_6ia1l"]
+[ext_resource type="Texture2D" uid="uid://s3j1y0fpns7p" path="res://item/itemTextures.png" id="2_7y1ft"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbuq0"]
+atlas = ExtResource("2_7y1ft")
+region = Rect2(0, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_6ia1l")
+name = "Fork"
+description = "LMB to stab"
+stackable = false
+texture = SubResource("AtlasTexture_pbuq0")

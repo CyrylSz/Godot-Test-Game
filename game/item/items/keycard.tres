@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://d2tm1vk6wysf7"]
+
+[ext_resource type="Script" path="res://item/item_data.gd" id="1_15vum"]
+[ext_resource type="Texture2D" uid="uid://s3j1y0fpns7p" path="res://item/itemTextures.png" id="2_rsfnf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4h2kb"]
+atlas = ExtResource("2_rsfnf")
+region = Rect2(32, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_15vum")
+name = "Keycard"
+description = "Can open metal doors"
+stackable = false
+texture = SubResource("AtlasTexture_4h2kb")

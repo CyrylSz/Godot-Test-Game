@@ -1,23 +1,34 @@
-[gd_scene load_steps=4 format=3 uid="uid://hf37fvoix7wn"]
+[gd_scene load_steps=6 format=3 uid="uid://hf37fvoix7wn"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_2cx58"]
-[ext_resource type="Texture2D" uid="uid://2p42dtck7kr1" path="res://player/player_idle.png" id="1_qjr47"]
+[ext_resource type="Script" path="res://inventory/inventory_data_equip.gd" id="2_utjb3"]
+[ext_resource type="Texture2D" uid="uid://b5kulsgp44hcp" path="res://player/player-prison-idle.png" id="2_y0xoy"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_3vme5"]
-radius = 5.09902
+[sub_resource type="Resource" id="Resource_65vkf"]
+script = ExtResource("2_utjb3")
+slot_datas = Array[Resource("res://inventory/slot/slot_data.gd")]([null])
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j0wnm"]
+radius = 7.0
+height = 26.0
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_2cx58")
+equip_inventory_data = SubResource("Resource_65vkf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_qjr47")
-hframes = 4
+texture = ExtResource("2_y0xoy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
-shape = SubResource("CircleShape2D_3vme5")
+[node name="ShapeHitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_j0wnm")
+debug_color = Color(0.651309, 0.117348, 0.0533191, 0.42)
 
 [node name="Camera" type="Camera2D" parent="."]
 position_smoothing_enabled = true
-position_smoothing_speed = 7.0
+position_smoothing_speed = 12.0
 rotation_smoothing_speed = 4.0
+
+[node name="InteractRay" type="RayCast2D" parent="Camera"]
+target_position = Vector2(27, 0)
+collision_mask = 4
