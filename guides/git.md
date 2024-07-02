@@ -5,7 +5,7 @@ Repo (Repozytorium) to fancy folder, lokalny lub na GitHubie, przechowujący ga�
 
 Gałęzie też są fancy folderami przechowującymi różne stany jednego projektu i można je ze sobą scalać (tzw. merge).
 
-Gałąź to normalne foldery i pliki.
+Wewnątrz pojedynczej gałęzi znajdują się normalne foldery i pliki konkretnego stanu projektu.
 
 ## Tworzenie pustego repo na GitHub i pobierańsko Gita
 1. Otwórz [GitHub](https://github.com/) i zarejestruj się.
