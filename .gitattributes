@@ -1,4 +1,4 @@
-# Celem tego pliku jest wskazanie domyślnych formatów plików, które nie posiadają wbudowanego podglądu na GitHubie (np. skrypty .gd), aby można było je wygodnie podglądać na GitHubie
+# Celem tego pliku jest głównie wskazywanie formatów plikom, które nie posiadają domyślnie wbudowanego podglądu na GitHubie (np. skrypty .gd), aby można było je tutaj wygodnie podglądać
 
 # Normalize EOL for all files that Git considers text files.
 * text=auto eol=lf
