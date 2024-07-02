@@ -1,4 +1,4 @@
-# Celem tego pliku jest rekurencyjne blokowanie zbędnych plików konfiguracyjnych aby nie były wysyłane do repozytorium
+# Celem tego pliku jest rekurencyjne blokowanie zbędnych plików (np. konfiguracyjnych) aby nie były wysyłane do gałęzi przy pisaniu "git add ." (btw też usuwa już dodane)
 
 # Godot ignores
 .godot/
