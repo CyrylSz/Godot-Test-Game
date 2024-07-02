@@ -1,5 +1,5 @@
 # Guides
-## Guidebook:
+## Guidebooks:
    [Git i GitHub](git.md)
 
 ## Links:
