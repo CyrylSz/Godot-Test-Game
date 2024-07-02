@@ -1,6 +1,6 @@
 # Guides
 ## Guidebook:
-    * [Git i GitHub](./git.md)
+    * [Git i GitHub](guides/git.md)
 ## Links:
     * https://youtu.be/nAh_Kx5Zh5Q?si=Hb-UaByB0HUl28jC
     * https://youtu.be/TMhimQceLos?si=T5DCFwDvzbOtKrHz
