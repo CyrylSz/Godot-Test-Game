@@ -1,9 +1,14 @@
 # Git Guide
 ## Słowa
+
 Repo (Repozytorium) to fancy folder, lokalny lub na GitHubie, przechowujący gałęzie, ich historie i inne dane.
+
 Gałęzie też są fancy folderami przechowującymi różne stany jednego projektu i można je ze sobą scalać (tzw. merge).
+
 Gałąź to normalne foldery i pliki.
+
 ---
+
 ## Tworzenie repo na GitHub i pobierańsko Gita
 1. Otwórz [GitHub](https://github.com/) i zarejestruj się.
 2. Utwórz puste repozytorium.
