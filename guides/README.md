@@ -1,7 +1,7 @@
 # Guides
 ## Guidebook:
    [Git i GitHub](git.md)
----
+
 ## Links:
    [The ultimate introduction to Godot 4, część 1](https://youtu.be/nAh_Kx5Zh5Q?si=Hb-UaByB0HUl28jC)
    
