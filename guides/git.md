@@ -1,4 +1,4 @@
-# Git Guide
+# Git i GitHub - Guidebook
 ## Słowa
 
 Repo (Repozytorium) to fancy folder, lokalny lub na GitHubie, przechowujący gałęzie, ich historie i inne dane.
@@ -7,9 +7,7 @@ Gałęzie też są fancy folderami przechowującymi różne stany jednego projek
 
 Gałąź to normalne foldery i pliki.
 
----
-
-## Tworzenie repo na GitHub i pobierańsko Gita
+## Tworzenie pustego repo na GitHub i pobierańsko Gita
 1. Otwórz [GitHub](https://github.com/) i zarejestruj się.
 2. Utwórz puste repozytorium.
 3. Otwórz [gitforwindows.org](https://gitforwindows.org/) i kliknij download.
@@ -17,7 +15,7 @@ Gałąź to normalne foldery i pliki.
 5. Domyślny edytor: dowolny (np. VSC lub Notepad).
 6. Wszystko inne wyjebane, więc spamuj next.
 7. Uruchom "Git Bash".
----
+
 ## Git
 ### Jednorazowe czynności:
 1. Konfiguracja:
@@ -39,7 +37,7 @@ git add .   # dodanie wszystkiego (poza plikami wymienionymi w .gitignore) z obe
 git status
 git commit -m "opis zmian"   # dokumentacja, wiadomość o tym co dodałeś. "-m" to skrót od "message" i umożliwia dodanie wiadomości opisującej commit bez konieczności otwierania edytora tekstu
 ```
-4. Łączenie SSH z GitHubem:
+4. Połączenie SSH z GitHubem:
 ```bash
 ls -al ~/.ssh
 ssh-keygen -t rsa -b 4096 -C "SweetNight@gmail.com"
@@ -54,7 +52,7 @@ git branch -M main   # zmiana nazwy gałęzi "master" na "main", bo "main" to tr
 git push -u origin main   # "-u" oznacza „upstream” i powiązuje local gałąź „main” z remote gałąź „main” znajdującej się na remote repo „origin”
 git push   # można teraz pisać skrótowo dzięki połączeniu
 git remote -v   # "-v" view remote link, btw "git remote rm origin" usuwanie połączenia	
-git push origin main --force   # tylko jak pushe normalne nie działają z jakiś powodów
+git push origin main --force   # tylko jak pushe normalne nie działają z jakichś powodów
 ```
 ### Rutynowe czynności:
 1. Nawigacja:
@@ -97,4 +95,3 @@ git pull
 git pull   # manualnie musisz naprawić wskazane pliki usuwając niechciany kod
 git pull --rebase   # próba automatycznej naprawy merge conflict'ów, jeśli działa you are done
 ```
----
