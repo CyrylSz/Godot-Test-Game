@@ -10,7 +10,7 @@ func _unhandled_key_input(event) -> void:
 		return
 	
 	if range(KEY_1, KEY_4).has(event.keycode):
-		hot_bar_use.emit(event.keycode - KEY_1)
+		hot_bar_use.emit((event.keycode - KEY_1)+9)
 
 func set_inventory_data(inventory_data: InventoryData) -> void:
 	inventory_data.inventory_updated.connect(populate_hot_bar)
