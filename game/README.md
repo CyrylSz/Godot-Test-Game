@@ -1,9 +1,9 @@
-# [ Dev board ]
+# Dev board
 
 [Link to dev board](https://1drv.ms/o/s!Ah2eJRV3UwEygeN6mWas_na4dgxNRA?e=YrJdbh)
 
 ## Current focus:
-	>>> inventory system <<<
+    >>> inventory system <<<
 ## Things to add:
 - [x] stworzenie ogólnej struktury opartej na resource'ach
 - [x] hotbar z 3 slotami
@@ -31,7 +31,7 @@
 - [ ] lekko przezroczysta ciemnopomarańczowa tekstura slotów
 - [ ] lekkie migotanie itemu jak leży
 ---
-# [ Dev notes ]
+# Dev notes
 
 ## Latest commit:
 * zmiana V-sync mode na "Disabled" (naprawa lagowania przy poruszaniu myszką)
