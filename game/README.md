@@ -1,5 +1,4 @@
 # Dev board
-# Dev board
 
 [Link to dev board](https://1drv.ms/o/s!Ah2eJRV3UwEygeN6mWas_na4dgxNRA?e=YrJdbh)
 
