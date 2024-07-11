@@ -4,9 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://cso47nyre5ov5" path="res://item/item_atlas.tres" id="1_5n5ro"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aj4uv"]
-radius = 39.3192
+radius = 9.05539
 
 [node name="PickUp" type="Node2D"]
+scale = Vector2(4, 4)
 script = ExtResource("1_0d2kk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -20,3 +21,4 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_aj4uv")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

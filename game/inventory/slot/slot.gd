@@ -1,4 +1,4 @@
-extends PanelContainer
+extends TextureRect
 
 signal slot_clicked(index: int, button: int)
 

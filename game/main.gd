@@ -33,4 +33,4 @@ func _on_inventory_interface_drop_slot_data(slot_data):
 	var pick_up = PickUp.instantiate()
 	pick_up.slot_data = slot_data
 	pick_up.position = player.get_drop_position()
-	add_child(pick_up)
+	$PickUps.add_child(pick_up)

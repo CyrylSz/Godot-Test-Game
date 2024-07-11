@@ -1,18 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://p00wybin4l13"]
+[gd_scene load_steps=3 format=3 uid="uid://p00wybin4l13"]
 
 [ext_resource type="Script" path="res://inventory/hot_bar_inventory.gd" id="1_07kvc"]
+[ext_resource type="Texture2D" uid="uid://cpt3jog0sqpsw" path="res://inventory/Inventory_background.png" id="2_souhu"]
 
 [node name="HotBarInventory" type="PanelContainer"]
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_07kvc")
 
+[node name="Background" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_souhu")
+patch_margin_left = 11
+patch_margin_top = 11
+patch_margin_right = 11
+patch_margin_bottom = 11
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
-theme_override_constants/margin_left = 4
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 4
-theme_override_constants/margin_bottom = 4
+theme_override_constants/margin_left = 11
+theme_override_constants/margin_top = 11
+theme_override_constants/margin_right = 11
+theme_override_constants/margin_bottom = 11
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2

@@ -1,11 +1,11 @@
-# [ Dev board ]
+# Dev board
 
 [Link to dev board](https://1drv.ms/o/s!Ah2eJRV3UwEygeN6mWas_na4dgxNRA?e=YrJdbh)
 
 ## Current focus:
 	>>> inventory system <<<
 ## Things to add:
-- [x] stworzenie ogólnej struktury opartej na resource'ach
+- [x] stworzenie ogólnej struktury ekwipunku opartej na resource'ach
 - [x] hotbar z 3 slotami
 - [x] example inventory i otwarcie pod "e"
 - [x] example skrzynia i otwarcie pod "f" jak przecina interact_ray
@@ -25,13 +25,15 @@
 - [ ] Przyciski do list pojawiają się gdy ilość elementów w niej jest minimum 1
 - [x] możliwość używania consumable itemów z hotbaru
 - [ ] możliwość rzucania itemami gdy item jest throwable i wybrany na hotbarze
-- [ ] podnoszenie itemów gdy przecina interact_ray i kliknie się "f" lub LPM
+- [x] podnoszenie itemów gdy blisko gracza i gdy kliknie się "f"
+- [x] możliwosć wyrzucenia itemów z ekwipunku na podłoge
 - [ ] smooth wyświetlanie tooltipu z nazwą nad itemem gdy przecina interact_ray
 - [ ] podnoszenie/craftowanie coraz lepszych plecaków powiększajęcych inv space
-- [ ] lekko przezroczysta ciemnopomarańczowa tekstura slotów
+- [x] otekturowanie slotów i backgroundu ekwipunku
 - [ ] lekkie migotanie itemu jak leży
----
-# [ Dev notes ]
+- [x] zbytnie oddalenie się od skrzyni automatycznie zamyka jej podgląd
+
+# Dev notes
 
 ## Latest commit:
 * zmiana V-sync mode na "Disabled" (naprawa lagowania przy poruszaniu myszką)
@@ -43,4 +45,4 @@
 * obracanie się sprite'ów troche ssie
 
 ## Info:
-* rzeczy obecnie są skalowane x4 (tylko w Main)
+* rzeczy obecnie są skalowane x4

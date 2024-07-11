@@ -47,6 +47,19 @@ script = ExtResource("1_nqrxi")
 [node name="Level-1-Prison" parent="." instance=ExtResource("1_wbkk7")]
 scale = Vector2(4, 4)
 
+[node name="ExternalStorages" type="Node2D" parent="."]
+
+[node name="Chest" parent="ExternalStorages" instance=ExtResource("8_akh01")]
+position = Vector2(-1616, -1799)
+scale = Vector2(4, 4)
+inventory_data = SubResource("Resource_2ub4g")
+
+[node name="PickUps" type="Node2D" parent="."]
+
+[node name="Item" parent="PickUps" instance=ExtResource("14_lfcxp")]
+position = Vector2(-1981, -1798)
+slot_data = SubResource("Resource_mm3i3")
+
 [node name="Player" parent="." instance=ExtResource("2_48wy7")]
 position = Vector2(-1831, -2125)
 scale = Vector2(4, 4)
@@ -85,10 +98,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 180.0
-offset_top = -182.0
-offset_right = 196.0
-offset_bottom = -166.0
+offset_left = 190.0
+offset_top = -200.0
+offset_right = 212.0
+offset_bottom = -178.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -112,6 +125,8 @@ visible = false
 modulate = Color(1, 1, 1, 0.513726)
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
 
 [node name="HotBarInventory" parent="UI" instance=ExtResource("8_5tulp")]
 anchors_preset = 7
@@ -126,25 +141,52 @@ offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Chest" parent="." instance=ExtResource("8_akh01")]
-position = Vector2(-1616, -1799)
-scale = Vector2(4, 4)
-inventory_data = SubResource("Resource_2ub4g")
-
-[node name="PickUp" parent="." instance=ExtResource("14_lfcxp")]
-position = Vector2(-1981, -1798)
-scale = Vector2(4, 4)
-slot_data = SubResource("Resource_mm3i3")
-
 [node name="Darkness" type="CanvasModulate" parent="."]
 color = Color(0.125911, 0.125911, 0.125911, 1)
 
-[node name="Brightness" type="PointLight2D" parent="."]
+[node name="Brightness" type="Node2D" parent="."]
+
+[node name="PointLight1" type="PointLight2D" parent="Brightness"]
 position = Vector2(-1854, -1993)
 scale = Vector2(2.26065, 1.08075)
 energy = 0.84
 texture = ExtResource("16_v7384")
-texture_scale = 2.92
+texture_scale = 3.3
+
+[node name="PointLight2" type="PointLight2D" parent="Brightness"]
+position = Vector2(-252.051, -1949)
+scale = Vector2(2.73662, 1.08075)
+energy = 0.84
+texture = ExtResource("16_v7384")
+texture_scale = 3.3
+
+[node name="PointLight3" type="PointLight2D" parent="Brightness"]
+position = Vector2(-3315, -1774)
+scale = Vector2(0.695371, 1.11654)
+energy = 0.84
+texture = ExtResource("16_v7384")
+texture_scale = 3.3
+
+[node name="PointLight4" type="PointLight2D" parent="Brightness"]
+position = Vector2(-1522.5, -1521)
+scale = Vector2(2.63613, 0.729167)
+energy = 0.84
+texture = ExtResource("16_v7384")
+texture_scale = 3.3
+
+[node name="PointLight5" type="PointLight2D" parent="Brightness"]
+position = Vector2(-105, -1552)
+scale = Vector2(2.63613, 0.729167)
+energy = 0.84
+texture = ExtResource("16_v7384")
+texture_scale = 3.3
+
+[node name="PointLight6" type="PointLight2D" parent="Brightness"]
+position = Vector2(-2801, -1776)
+scale = Vector2(1.05528, 0.520833)
+energy = 0.84
+texture = ExtResource("16_v7384")
+texture_scale = 3.3
 
 [connection signal="drop_slot_data" from="UI/InventoryInterface" to="." method="_on_inventory_interface_drop_slot_data"]
 [connection signal="gui_input" from="UI/InventoryInterface" to="UI/InventoryInterface" method="_on_gui_input"]

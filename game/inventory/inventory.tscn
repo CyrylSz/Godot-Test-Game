@@ -1,18 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcluj0i13w4ng"]
+[gd_scene load_steps=3 format=3 uid="uid://dcluj0i13w4ng"]
 
 [ext_resource type="Script" path="res://inventory/inventory.gd" id="1_qyppd"]
+[ext_resource type="Texture2D" uid="uid://cpt3jog0sqpsw" path="res://inventory/Inventory_background.png" id="2_aryi4"]
 
 [node name="Inventory" type="PanelContainer"]
 offset_right = 18.0
 offset_bottom = 18.0
 script = ExtResource("1_qyppd")
 
+[node name="Background" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_aryi4")
+patch_margin_left = 11
+patch_margin_top = 11
+patch_margin_right = 11
+patch_margin_bottom = 11
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
-theme_override_constants/margin_left = 4
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 4
-theme_override_constants/margin_bottom = 4
+theme_override_constants/margin_left = 11
+theme_override_constants/margin_top = 11
+theme_override_constants/margin_right = 11
+theme_override_constants/margin_bottom = 11
 
 [node name="ItemGrid" type="GridContainer" parent="MarginContainer"]
 layout_mode = 2
