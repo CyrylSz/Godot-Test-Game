@@ -2,42 +2,42 @@
 	>>> inventory system <<<
 
 ## Things to add:
-- [x] stworzenie ogólnej struktury ekwipunku opartej na resource'ach
-- [x] hotbar z 3 slotami
-- [x] example inventory i otwarcie pod "e"
-- [x] example skrzynia i otwarcie pod "f" jak przecina interact_ray
-- [x] armor slot w którym można umieścić tylko itemy typu ItemDataEquip
-- [ ] przedmiot jest w ramce gdy jest trzymany i na hotbarze
-- [x] wyświetlenie name i description jako tooltip'u
-- [x] kliknięcie PPM przeciągając stackable przedmiot upuszcza polowe
-- [x] kliknięcie PPM + shift przeciągając stackable przedmiot upuszcza tylko 1
-- [x] mozliwosć dzielenia stackable przedmiotów podczas przeciągania dzięki PPM
-- [x] przeciąganie itemów miedzy slotami gdy trzyma się LPM
-- [ ] podczas przeciągania itemu na inny:
-	- [x] albo scalają się w jednen jeśli to ten sam stacakble item
-	- [x] albo zamieniają się miejscami
-	- [ ] albo wyświetla się okno wyboru swap lub combine w nowy item
-- [ ] lista przypadkowo/znalezionych crafting recipe pod przyciskiem w inv
-- [ ] lista znalezionych notatek z lore lub wzkazówek pod przyciskiem w inv
-- [ ] lista questów pod przyciekiem w inv
-- [ ] Przyciski do list pojawiają się gdy ilość elementów w niej jest minimum 1
-- [x] możliwość używania consumable itemów z hotbaru
-- [ ] możliwość rzucania itemami gdy item jest throwable i wybrany na hotbarze
-- [x] podnoszenie itemów gdy blisko gracza i gdy kliknie się "f"
-- [x] możliwosć wyrzucenia itemów z ekwipunku na podłoge
-- [ ] smooth wyświetlanie tooltipu z nazwą nad itemem gdy przecina interact_ray
-- [ ] podnoszenie/craftowanie coraz lepszych plecaków powiększajęcych inv space
-- [x] otekturowanie slotów i backgroundu ekwipunku
-- [ ] lekkie migotanie itemu jak leży
-- [x] zbytnie oddalenie się od skrzyni automatycznie zamyka jej podgląd
-- [ ] możliwość szybkiego przeżucania itemów między ekwipunkami gdy shift + LPM
+- [x] creation of a general inventory structure based on resources
+- [x] hotbar with 3 slots
+- [x] example inventory and opening with "e"
+- [x] example chest and opening with "f" when it intersects `interact_ray`
+- [x] armor slot that only accepts items of type `ItemDataEquip`
+- [ ] item is highlighted when held and on the hotbar
+- [x] displaying name and description as a tooltip
+- [x] right-clicking (RMB) while dragging a stackable item drops half
+- [x] right-clicking (RMB) + shift while dragging a stackable item drops only 1
+- [x] ability to split stackable items while dragging using RMB
+- [x] dragging items between slots when holding LMB
+- [ ] when dragging an item onto another:
+    - [x] either they merge if it’s the same stackable item
+    - [x] or they swap places
+    - [ ] or a window appears to choose swap or combine into a new item
+- [ ] list of random/found crafting recipes under a button in inventory
+- [ ] list of found lore notes or clues under a button in inventory
+- [ ] list of quests under a button in inventory
+- [ ] buttons for lists appear when the list has at least 1 item
+- [x] ability to use consumable items from the hotbar
+- [ ] ability to throw items if the item is throwable and selected on the hotbar
+- [x] picking up items when close to the player and pressing "f"
+- [x] ability to drop items from inventory onto the ground
+- [ ] smooth display of a tooltip with the name above an item when intersecting `interact_ray`
+- [ ] picking up/crafting increasingly better backpacks that expand inventory space
+- [x] texturing of inventory slots and background
+- [ ] slight flickering of items on the ground
+- [x] moving too far from a chest automatically closes its view
+- [ ] ability to quickly transfer items between inventories with shift + LMB
 
 # Dev notes
 
 ## Bugs:
-* position smoothing kamery troche ssie
-* obracanie się sprite'ów troche ssie
-* drastyczne spadki fps'ów przy poruszaniu myszką
+* camera position smoothing kind of sucks
+* sprite rotation kind of sucks
+* drastic FPS drops when moving the mouse
 
 ## Info:
-* rzeczy obecnie są skalowane x4
+* things are currently scaled by x4
