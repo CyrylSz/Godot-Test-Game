@@ -1,18 +1,16 @@
-# Dev board
-
-[Link to dev board](https://1drv.ms/o/s!Ah2eJRV3UwEygeN6mWas_na4dgxNRA?e=YrJdbh)
-
-## Current focus:
+# Current focus:
 	>>> inventory system <<<
+
 ## Things to add:
 - [x] stworzenie ogólnej struktury ekwipunku opartej na resource'ach
 - [x] hotbar z 3 slotami
 - [x] example inventory i otwarcie pod "e"
 - [x] example skrzynia i otwarcie pod "f" jak przecina interact_ray
 - [x] armor slot w którym można umieścić tylko itemy typu ItemDataEquip
-- [ ] zielona ramka gdy przedmiot trzymany i na hotbarze
-- [ ] żółta ramka gdy kliknięcie LPM i wyświetlenie name i description
-- [ ] kliknięcie PPM na stackable przedmiot dzieli jego ilość na pół
+- [ ] przedmiot jest w ramce gdy jest trzymany i na hotbarze
+- [x] wyświetlenie name i description jako tooltip'u
+- [x] kliknięcie PPM przeciągając stackable przedmiot upuszcza polowe
+- [x] kliknięcie PPM + shift przeciągając stackable przedmiot upuszcza tylko 1
 - [x] mozliwosć dzielenia stackable przedmiotów podczas przeciągania dzięki PPM
 - [x] przeciąganie itemów miedzy slotami gdy trzyma się LPM
 - [ ] podczas przeciągania itemu na inny:
@@ -32,17 +30,14 @@
 - [x] otekturowanie slotów i backgroundu ekwipunku
 - [ ] lekkie migotanie itemu jak leży
 - [x] zbytnie oddalenie się od skrzyni automatycznie zamyka jej podgląd
+- [ ] możliwość szybkiego przeżucania itemów między ekwipunkami gdy shift + LPM
 
 # Dev notes
-
-## Latest commit:
-* zmiana V-sync mode na "Disabled" (naprawa lagowania przy poruszaniu myszką)
-* zmiana rendering method na Compatibility
-* dodanie światła, ciemności i zmienienie default clear color na pure black
 
 ## Bugs:
 * position smoothing kamery troche ssie
 * obracanie się sprite'ów troche ssie
+* drastyczne spadki fps'ów przy poruszaniu myszką
 
 ## Info:
 * rzeczy obecnie są skalowane x4

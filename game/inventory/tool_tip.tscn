@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://btttg6fn0x5bv"]
+
+[ext_resource type="Texture2D" uid="uid://cpt3jog0sqpsw" path="res://inventory/Inventory_background.png" id="1_w1tei"]
+[ext_resource type="FontFile" uid="uid://3rv5ic5wfgit" path="res://inventory/slot/Monocraft-nerd-fonts-patched.ttf" id="2_c8ifp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3cael"]
+font = ExtResource("2_c8ifp")
+font_size = 18
+font_color = Color(0, 0, 0, 1)
+outline_size = 2
+outline_color = Color(0.65657, 0.440029, 0.220052, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_12akj"]
+font = ExtResource("2_c8ifp")
+font_size = 18
+font_color = Color(0.990769, 0.95909, 0.931169, 1)
+
+[node name="ToolTip" type="Popup"]
+size = Vector2i(300, 200)
+visible = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_w1tei")
+patch_margin_left = 11
+patch_margin_top = 11
+patch_margin_right = 11
+patch_margin_bottom = 11
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -49.5
+offset_right = 49.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="name" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Glass Knife"
+label_settings = SubResource("LabelSettings_3cael")
+
+[node name="description" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "fucking good weapon idk bruh bruh bruh bruh bruh bruh bruh bruh xddddddddddddddddddddddddddddddddddddddd"
+label_settings = SubResource("LabelSettings_12akj")
+autowrap_mode = 3

@@ -56,7 +56,7 @@ inventory_data = SubResource("Resource_2ub4g")
 
 [node name="PickUps" type="Node2D" parent="."]
 
-[node name="Item" parent="PickUps" instance=ExtResource("14_lfcxp")]
+[node name="Ammo" parent="PickUps" instance=ExtResource("14_lfcxp")]
 position = Vector2(-1981, -1798)
 slot_data = SubResource("Resource_mm3i3")
 

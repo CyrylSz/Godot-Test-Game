@@ -57,7 +57,10 @@ func on_inventory_interact(inventory_data: InventoryData, index: int, button: in
 		[null, MOUSE_BUTTON_RIGHT]:
 			inventory_data.use_slot_data(index)
 		[_, MOUSE_BUTTON_RIGHT]:
-			grabbed_slot_data = inventory_data.drop_single_slot_data(grabbed_slot_data, index)
+			if Input.is_action_pressed("shift") or not grabbed_slot_data.item_data.stackable:
+				grabbed_slot_data = inventory_data.drop_single_slot_data(grabbed_slot_data, index)
+			else:
+				grabbed_slot_data = inventory_data.drop_half_slot_datas(grabbed_slot_data, index)
 	
 	update_grabbed_slot()
 

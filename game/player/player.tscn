@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://hf37fvoix7wn"]
+[gd_scene load_steps=7 format=3 uid="uid://hf37fvoix7wn"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_2cx58"]
 [ext_resource type="Script" path="res://inventory/inventory_data_equip.gd" id="2_utjb3"]
 [ext_resource type="Texture2D" uid="uid://b5kulsgp44hcp" path="res://player/player-prison-idle.png" id="2_y0xoy"]
+[ext_resource type="Script" path="res://inventory/slot/slot_data.gd" id="3_pbawy"]
 
 [sub_resource type="Resource" id="Resource_65vkf"]
 script = ExtResource("2_utjb3")
-slot_datas = Array[Resource("res://inventory/slot/slot_data.gd")]([null])
+slot_datas = Array[ExtResource("3_pbawy")]([null])
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j0wnm"]
 radius = 7.0
